@@ -1,0 +1,26 @@
+.main {
+  height: 140vh;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+.body {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.body p {
+   @apply font-switzer;
+  font-size: 3.5vw;
+  margin: 0px;
+  margin-right: 1.5vh;
+}
+
+.body span {
+   opacity: 0.2;
+}

@@ -1,0 +1,62 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25vh;
+  color: whitesmoke;
+  padding: 10%;
+}
+
+.projectsDescription {
+  display: flex;
+  height: 700px;
+  gap: 5%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+.imageContainer {
+  position: relative;
+  height: 100%;
+  width: 40%;
+}
+
+.imageContainer img {
+  object-fit: cover;
+  object-position: top;
+}
+
+.column {
+  width: 20%;
+  font-size: 1.5vw;
+}
+
+.column:last-of-type {
+  font-size: 1vw;
+  align-items: flex-end;
+}
+
+.projectList {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectEl {
+  @apply font-clashDisplay;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid whitesmoke;
+  font-size: 3.4vw;
+  font-weight: 700;
+}
+
+.projectEl:last-of-type {
+  border-bottom: 1px solid whitesmoke;
+}
+
+.projectEl p {
+  margin: 0px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
