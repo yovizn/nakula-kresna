@@ -66,7 +66,7 @@ export const CarouselSlider = [
 export const NavLinks = [
   {
     id: 1,
-    href: "/",
+    href: "/home",
     title: "Home",
   },
   {

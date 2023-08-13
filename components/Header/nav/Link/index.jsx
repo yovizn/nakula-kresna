@@ -1,13 +1,14 @@
+import styles from "./style.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { slide, scale } from "@components/Header/anim";
+import { slide, scale } from "../../anim";
 
-const LinkNav = ({ data, isActive, setSelectedIndicator }) => {
-  const { title, href, index, icon } = data;
+export default function Index({ data, isActive, setSelectedIndicator }) {
+  const { title, href, index } = data;
 
   return (
     <motion.div
-      className="relative flex items-center"
+      className={styles.link}
       onMouseEnter={() => {
         setSelectedIndicator(href);
       }}
@@ -20,11 +21,9 @@ const LinkNav = ({ data, isActive, setSelectedIndicator }) => {
       <motion.div
         variants={scale}
         animate={isActive ? "open" : "closed"}
-        className="w-[10xp] h-[10px] bg-[#ffffff] rounded-[50%] absolute left-[-30px]"
+        className={styles.indicator}
       ></motion.div>
-      <a href={href}>{title}</a>
+      <Link href={href} className="text-end">{title}</Link>
     </motion.div>
   );
-};
-
-export default LinkNav;
+}

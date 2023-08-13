@@ -8,9 +8,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 
-export default function index() {
-  const backgroundImage = useRef<HTMLDivElement>(null);
-  const introImage = useRef<HTMLDivElement>(null);
+export default function Index() {
+  const backgroundImage = useRef(null);
+  const introImage = useRef(null);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -27,7 +27,7 @@ export default function index() {
     timeline
       .from(backgroundImage.current, { clipPath: "inset(15%)" })
       .to(introImage.current, { height: "200px" }, 0);
-  }, [backgroundImage, introImage]);
+  }, []);
 
   return (
     <div className={styles.intro}>

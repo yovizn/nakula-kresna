@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
-export default function History() {
+export default function Index() {
   const phrase =
     "Sungguh perjalanan panjang bagi kami untuk mengaplikasikan dan mewujudkan keinginan kami untuk wujudkan Website Nakula Kresna, kami sangat berterima kasih untuk bapak 'Darman' yang sudah mensupport kami dan masyarakat yang tergabung dari RT 10 sampai dengan RT 13, yang sudah mengirimkan wakilnya untuk berkontribusi dalam project ini. Kami sebagai Team Developer Website Nakula Kresna, kedepannya akan memperluas fungsi dan kinerja dari Website ini dengan tujuan untuk memuaskan kebutuhan masyarakat akan informasi dan pelayan publik";
 

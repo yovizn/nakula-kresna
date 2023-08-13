@@ -6,9 +6,9 @@ import { useState, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function index() {
-  const [selectedProject, setSelectedProject] = useState<0>(0);
-  const imageContainerRef = useRef<HTMLDivElement>(null);
+export default function Index() {
+  const [selectedProject, setSelectedProject] = useState(0);
+  const imageContainer = useRef(null);
   const projects = [
     {
       title: "Yovi Zulkarnaen",

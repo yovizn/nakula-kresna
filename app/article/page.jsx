@@ -1,9 +1,15 @@
-import HeroArticle from "@components/Article/Hero";
+import Hero from "@components/Article/Hero/index";
+import Prolog from "@components/Article/Prolog/index";
+import History from "@components/Article/History/index"
 
-const Artcicle = () => {
-  return <>
-    <HeroArticle />
-  </>;
-};
+export default function Article() {
+  return (
+    <main className="min-h-screen">
+      <Hero />
 
-export default Artcicle;
+      <Prolog />
+
+      <History />
+    </main>
+  );
+}

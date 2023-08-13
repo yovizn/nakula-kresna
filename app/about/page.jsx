@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import styles from "@app/about/style.module.scss";
 import Intro from "@components/About/Intro/index";
 import Description from "@components/About/Description/index";
 import Projects from "@components/About/Projects/index";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "@components/Preloader";
 import History from "@components/About/History";
+import LocomotiveScroll from "locomotive-scroll";
 
 export default function About() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +26,7 @@ export default function About() {
   }, []);
 
   return (
-    <main className={styles.main}>
+    <main className="flex flex-col gap-5">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>

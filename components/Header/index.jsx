@@ -1,22 +1,21 @@
 "use client";
-
-import { useRef, useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import Nav from "./nav/index";
-import { NavLinks } from "@constants";
-import Link from "next/link";
+import { useLayoutEffect, useRef, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import Nav from "./Nav/index";
+import styles from "./style.module.scss";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { NavLinks } from "@constants";
 
-const Navbar = () => {
+export default function Index() {
   const [isActive, setIsActive] = useState(false);
   const path = usePathname();
 
   let menuRef = useRef();
-  useEffect(() => {
+  useLayoutEffect(() => {
     let handler = (e) => {
       if (!menuRef.current.contains(e.target)) {
         setIsActive(false);
-        console.log(menuRef.current);
       }
     };
 
@@ -25,43 +24,46 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handler);
     };
-  });
+  }, []);
 
   return (
-    <nav className="block">
+    <>
       <Link
+        passHref
         href="/"
-        className="hidden md:block absolute w-fit h-fit top-10 left-10 z-50"
+        className="hidden md:block absolute w-fit h-fit top-10 left-10 z-50 overflow-hidden"
       >
-        <h1 className="text-6xl xl:text-7xl text-primary [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] font-clashDisplay font-semibold uppercase mb-1">
-          Nakula Kresna
+        <div className="uppercase text-green text-2xl desktop:text-5xl [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] font-clashDisplay font-semibold mb-1 group">
+          <h1>Nakula Kresna</h1>
           {NavLinks.map((link) => (
-            <span
+            <p
               key={link.id}
               className={`${
                 link.href === path ? "absolute bottom-0 right-0 w-fit" : ""
-              }hidden text-xl text-whiteness`}
+              }hidden text-lg text-white translate-y-[2rem] group-hover:translate-y-0 transition-transform duration-150`}
             >
               {`Your are on "${link.title}"`}
-            </span>
+            </p>
           ))}
-        </h1>
+        </div>
       </Link>
-      <div ref={menuRef}>
+      <div>
+        <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
+
         <div
+          ref={menuRef}
           onClick={() => {
             setIsActive(!isActive);
           }}
-          className="hamburger-menu"
+          className={styles.button}
         >
-          <div className={`burger ${isActive ? "burgerActive" : ""}`}></div>
+          <div
+            className={`${styles.burger} ${
+              isActive ? styles.burgerActive : ""
+            }`}
+          ></div>
         </div>
-
-        {/* SideNav w/ Animation */}
-        <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
       </div>
-    </nav>
+    </>
   );
-};
-
-export default Navbar;
+}

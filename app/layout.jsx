@@ -1,21 +1,21 @@
-import "@styles/globals.css";
-
-import { Footer, Header } from "@components";
+import "@style/globals.css";
+import Header from "@components/header"
 
 export const metadata = {
-  title: "Nakula Kresna",
-  description: "Discover & Share AI Prompts",
+  title: "Nakula Kresna App",
+  description: "Created by Nakula Kresna",
 };
 
-const RootLayout = ({ children }) => (
-  <html lang="en">
-    <body className="bg-dark">
-      <main className="h-full">
-        <Header />
-        {children}
-      </main>
-    </body>
-  </html>
-);
-
-export default RootLayout;
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      
+      <body className="bg-blackGreen font-clashDisplay text-white">
+        <main className="h-full">
+          <Header />
+          {children}
+        </main>
+      </body>
+    </html>
+  );
+}
