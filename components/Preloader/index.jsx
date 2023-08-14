@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { opacity, slideUp } from "./anim";
 
 const words = [
-  "Hallo",
-  "Semuanya",
-  "Silahkan",
-  "Jelajahi",
-  "Website",
   "Nakula Kresna",
+  "everything",
+  "about",
+  "History",
+  "and",
+  "Knowladge",
 ];
 
 export default function Preloader() {

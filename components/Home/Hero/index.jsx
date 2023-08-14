@@ -11,7 +11,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen overflow-hidden flex flex-col items-center justify-center">
-      <div className="mt-[40vh] mb-[50vh] md:mt-24 md:mb-10 text-center">
+      <div className="mt-10 mb-4 lg:mt-[20vh] lg:mb-[5rem] md:mt-24 md:mb-10 text-center">
         <p>Our Journey</p>
         <br />
         <h1 className="text-2xl lg:text-[8rem] max-w-xl uppercase lg:leading-[120px]">Berguna dan Mencipta</h1>
@@ -26,7 +26,7 @@ export default function Index() {
           priority
         />
         <motion.div
-          className="relative flex max-lg:flex-col ml-4 justify-between"
+          className="relative container flex max-lg:flex-col ml-4 justify-between"
           ref={hero}
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -54,7 +54,6 @@ export default function Index() {
           </div>
         </motion.div>
       </div>
-      <div className="flex flex-col h-full max-lg:flex-col items-center justify-center gap-2"></div>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import "@style/globals.css";
 import Header from "@components/header"
 
 export const metadata = {
-  title: "Nakula Kresna App",
+  title: "Nakula Kresna",
   description: "Created by Nakula Kresna",
 };
 

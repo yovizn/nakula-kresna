@@ -10,7 +10,6 @@
     width: 100%;
   }
   .gallery {
-    @apply bg-gradient-to-b from-dark to-secondary/80;
     height: 175vh;
     display: flex;
     flex-direction: row;
@@ -33,7 +32,7 @@
         overflow: hidden;
         img {
           object-fit: cover;
-          object-position: center;
+          object-position: top;
         }
       }
 
