@@ -1,54 +1,52 @@
 import Image from "next/image";
 
 export default function Index() {
+  const slides = [
+    {
+      id: 1,
+      title: "Siskamling",
+      src: "/images/Image1.jpg",
+    },
+    {
+      id: 2,
+      title: "Senam",
+      src: "/images/Image4.jpg",
+    },
+    {
+      id: 3,
+      title: "Kurban",
+      src: "/images/Image3.jpg",
+    },
+    {
+      id: 4,
+      title: "Drum Band",
+      src: "/images/Image2.jpg",
+    },
+  ];
+
   return (
     <div className="h-fit" data-scroll-section>
       <div
         className="w-full text-light text-4xl font-satoshi uppercase"
         id="kegiatan-section"
       >
-        <h1>Kegiatan Kami</h1>
+        <h1 className="px-4">Kegiatan Kami</h1>
       </div>
-      <div className="grid md:grid-cols-3 gap4 my-20 gap-10 p-4">
-        <div className="flex flex-col gap-4">
-          <div className="relative h-[28rem] w-full rounded-md overflow-hidden">
-            <Image
-              src="/images/image3.jpg"
-              alt="images"
-              fill={true}
-              className="object-cover"
-            />
-          </div>
-          <div className="text-xl text-light uppercase font-satoshi font-medium w-full">
-            <h1>Siskamling</h1>
-          </div>
-        </div>
-        <div className="flex flex-col gap-4">
-          <div className="relative h-[28rem] w-full rounded-md overflow-hidden">
-            <Image
-              src="/images/image6.jpg"
-              alt="images"
-              fill={true}
-              className="object-cover"
-            />
-          </div>
-          <div className="text-xl text-light uppercase font-satoshi font-medium w-full">
-            <h1>Senam</h1>
-          </div>
-        </div>
-        <div className="flex flex-col gap-4">
-          <div className="relative h-[28rem] w-full rounded-md overflow-hidden">
-            <Image
-              src="/images/image4.jpg"
-              alt="images"
-              fill={true}
-              className="object-cover"
-            />
-          </div>
-          <div className="text-xl text-light uppercase font-satoshi font-medium w-full">
-            <h1>pemotongan hewan kurban</h1>
-          </div>
-        </div>
+      <div>
+        {slides.map((l) => {
+          return (
+            <div key={l.id}>
+              <div className="max-w-[1400px] h-[780px] w-full mx-auto py-16 px-4 relative">
+                <Image
+                  src={l.src}
+                  alt="image"
+                  className="object-cover"
+                  fill={true}
+                />
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

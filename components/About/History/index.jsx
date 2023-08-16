@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react";
 
 export default function History() {
   const phrase =
-    "Sungguh perjalanan panjang bagi kami untuk mengaplikasikan dan mewujudkan keinginan kami untuk wujudkan Website Nakula Kresna, kami sangat berterima kasih untuk bapak 'Darman' yang sudah mensupport kami dan masyarakat yang tergabung dari RT 10 sampai dengan RT 13, yang sudah mengirimkan wakilnya untuk berkontribusi dalam project ini. Kami sebagai Team Developer Website Nakula Kresna, kedepannya akan memperluas fungsi dan kinerja dari Website ini dengan tujuan untuk memuaskan kebutuhan masyarakat akan Informasi dan Pelayan publik";
+    "Sungguh perjalanan panjang bagi kami untuk mengaplikasikan dan mewujudkan keinginan kami untuk wujudkan Website Nakula Kresna, kami sangat berterima kasih untuk bapak 'Darman' yang sudah mensupport kami dan masyarakat yang tergabung dari RT 10, RT 11, RT,12, dan RT 13, yang sudah mengirimkan wakilnya untuk berkontribusi dalam Project ini. Kami sebagai Team Developer Website Nakula Kresna, kedepannya akan memperluas fungsi dan kinerja dari Website ini dengan tujuan untuk memuaskan kebutuhan masyarakat akan Informasi dan Pelayan publik";
 
   const refs = useRef([]);
   const container = useRef(null);

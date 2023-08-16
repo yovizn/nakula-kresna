@@ -4,8 +4,8 @@ import styles from "./style.module.scss";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { menuSlide } from "../anim";
-import Link from './Link/index'
-import Curve from './Curve/index'
+import Link from "./Link/index";
+import Curve from "./Curve/index";
 
 export default function Index() {
   const pathname = usePathname();
@@ -27,7 +27,7 @@ export default function Index() {
           className={styles.nav}
         >
           <div className={styles.header}>
-            <p className="text-xl font-poppins">Navigation</p>
+            <p className="text-lg font-poppins">Navigation</p>
           </div>
           {NavLinks.map((data, index) => {
             return (
@@ -41,10 +41,18 @@ export default function Index() {
           })}
         </div>
         <div className={styles.footer}>
-          <a href="/" className="hover:text-green">Awwwards</a>
-          <a href="/" className="hover:text-green">Instagram</a>
-          <a href="/" className="hover:text-green">Dribble</a>
-          <a href="/" className="hover:text-green">LinkedIn</a>
+          <a href="/" className="hover:text-green">
+            Awwwards
+          </a>
+          <a href="/" className="hover:text-green">
+            Instagram
+          </a>
+          <a href="/" className="hover:text-green">
+            Dribble
+          </a>
+          <a href="/" className="hover:text-green">
+            LinkedIn
+          </a>
         </div>
         <Curve />
       </div>

@@ -1,13 +1,14 @@
-"use client"
+"use client";
 
 import Hero from "@components/Home/Hero/index";
+import Prolog from "@components/Home/Prolog";
 import Preloader from "@components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { useLayoutEffect, useState } from "react";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true)
-  
+  const [isLoading, setIsLoading] = useState(true);
+
   useLayoutEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -26,6 +27,8 @@ export default function Home() {
         {isLoading && <Preloader />}
       </AnimatePresence>
       <Hero />
+
+      <Prolog />
     </main>
   );
 }
