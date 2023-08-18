@@ -1,47 +1,26 @@
-export const footerLinks = [
+export const FasilitasLink = [
   {
-    title: "Refrence",
-    links: ["Sosial & Lingkungan", "NK Ekonomi", "Olahraga & Seni", "Keamanan"],
+    title: "Keagamaan",
+    agamaIslam: [
+      {
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+        source: "/images/image2.jpg",
+      },
+    ],
+    agamaKristen: [
+      {
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+        source: "/images/image2.jpg",
+      },
+    ],
   },
   {
-    title: "Activities",
-    links: ["Timeline Activities", "Hightlight", "Next Event"],
-  },
-  {
-    title: "About",
-    links: ["Upgrade Dev skills", "About Nakula Kresna", "About our Website"],
-  },
-  {
-    title: "Contact",
-    links: ["Youtube", "Instagram", "Email", "Facebook"],
-  },
-];
-
-export const cardLinks = [
-  {
-    title: "Tempat Beribadah",
-    source: "/images/Mosque_.png",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquam natus, aspernatur, consequuntur hic fugiat sint totam incidunt a obcaecati aperiam nemo. Harum, at!",
-  },
-  {
-    title: "Apa saja fasilitas beribadah kami?",
-    source: "/images/Mosque_.png",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquam natus, aspernatur, consequuntur hic fugiat sint totam incidunt a obcaecati aperiam nemo. Harum, at!",
-  },
-  {
-    title: "Apa saja fasilitas beribadah kami?",
-    source: "/images/Mosque_.png",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquam natus, aspernatur, consequuntur hic fugiat sint totam incidunt a obcaecati aperiam nemo. Harum, at!",
-  },
-  {
-    title: "Apa saja fasilitas beribadah kami?",
-    source: "/images/Mosque_.png",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquam natus, aspernatur, consequuntur hic fugiat sint totam incidunt a obcaecati aperiam nemo. Harum, at!",
-  },
-  {
-    title: "Apa saja fasilitas beribadah kami?",
-    source: "/images/Mosque_.png",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquam natus, aspernatur, consequuntur hic fugiat sint totam incidunt a obcaecati aperiam nemo. Harum, at!",
+    title: "",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+    source: "/images/image2.jpg",
   },
 ];
 
@@ -76,23 +55,8 @@ export const NavLinks = [
   },
   {
     id: 3,
-    href: "/activities",
-    title: "Aktifitas",
-  },
-  {
-    id: 4,
-    href: "/fasilitas",
-    title: "Fasilitas",
-  },
-  {
-    id: 5,
     href: "/about",
     title: "Tentang Kami",
-  },
-  {
-    id: 4,
-    href: "/news",
-    title: "News",
   },
 ];
 
@@ -156,5 +120,26 @@ export const AgendaLinks = [
     src: "/images/image2.jpg",
     date: "10 Juni 2023",
     loaction: "Musola Al-Iman, Perum. Bekasi Timur Permai",
+  },
+];
+
+export const FitureContent = [
+  {
+    value: "item-1",
+    title: "Apa itu Nakula Kresna?",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+  },
+  {
+    value: "item-2",
+    title: "Apa tujuan Nakula Kresna?",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+  },
+  {
+    value: "item-3",
+    title: "Apa saja yang ada di Nakula Kresna?",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
   },
 ];

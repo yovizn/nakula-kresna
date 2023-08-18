@@ -1,9 +1,11 @@
 "use client";
 
+import Fiture from "@components/Home/Fitur";
 import Hero from "@components/Home/Hero/index";
-import Prolog from "@components/Home/Prolog";
+import Prolog from "@components/Article/Prolog";
 import Preloader from "@components/Preloader";
 import { AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { useLayoutEffect, useState } from "react";
 
 export default function Home() {
@@ -22,13 +24,24 @@ export default function Home() {
     })();
   }, []);
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
       <Hero />
 
-      <Prolog />
-    </main>
+      <Fiture />
+
+      {/* Butto */}
+      <Link
+        href="/article"
+        className="container mx-auto mt-10 flex justify-end"
+      >
+        <div className="flex items-center justify-end">
+          <h1 className="text-xl mr-1">Selanjutnya</h1>
+          <div className="h-[2px] w-[80px] bg-white rounded-full" />
+        </div>
+      </Link>
+    </div>
   );
 }

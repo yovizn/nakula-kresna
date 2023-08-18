@@ -7,11 +7,11 @@ import Foto from "@public/images/image5.jpg";
 export default function Index() {
   return (
     <div className="min-h-screen overflow-hidden flex flex-col items-center justify-center">
-      <div className="container mx-auto mt-10 mb-4 lg:mt-[20vh] lg:mb-[5rem] md:mt-24 md:mb-10 text-center">
-        <h1 className="text-2xl lg:text-[8rem] uppercase lg:leading-[120px]">
-          <Balancer>Informasi, Kreasi & Sejarah</Balancer>
+      <div className="mt-10 mb-4 lg:mt-[20vh] lg:mb-[5rem] md:mt-24 md:mb-10 text-center">
+        <h1 className="text-2xl text-primary font-medium lg:text-[8.3rem] uppercase lg:leading-[120px]">
+          Informasi, Kreasi & Sejarah
         </h1>
-        <p>
+        <p className="text-accent lg:text-xl tracking-widest">
           <Balancer>
             Memberikan Informasi, Kreasi dan sejarah untuk masyarakat
           </Balancer>

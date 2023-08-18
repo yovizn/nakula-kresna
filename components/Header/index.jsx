@@ -33,7 +33,7 @@ export default function Index() {
         href="/"
         className="hidden md:block absolute w-fit h-fit top-10 left-10 z-50 overflow-hidden"
       >
-        <div className="uppercase text-green text-2xl desktop:text-5xl [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] font-clashDisplay font-semibold mb-1 group">
+        <div className="uppercase text-primary text-2xl desktop:text-5xl [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] font-clashDisplay font-semibold mb-1 group">
           <h1>Nakula Kresna</h1>
           {NavLinks.map((link) => (
             <p

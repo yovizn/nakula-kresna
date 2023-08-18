@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       
-      <body className="bg-blackGreen font-clashDisplay text-white">
+      <body className="bg-background font-clashDisplay text-text">
         <main className="h-full">
           <Header />
           {children}
