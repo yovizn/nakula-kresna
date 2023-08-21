@@ -6,11 +6,11 @@ import { opacity, slideUp } from "./anim";
 
 const words = [
   "Nakula Kresna",
-  "everything",
-  "about",
-  "History",
-  "and",
-  "Knowladge",
+  "Semua",
+  "Tentang",
+  "Sejarah",
+  "Kreasi",
+  "Informasi",
 ];
 
 export default function Preloader() {
@@ -47,7 +47,7 @@ export default function Preloader() {
     },
     exit: {
       d: targetPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 },
+      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.7 },
     },
   };
 

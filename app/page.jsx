@@ -11,7 +11,10 @@ export default function Page() {
           Media publikasi untuk masyarakat
         </p>
       </div>
-      <Link href="/home" className="bg-primary text-background px-4 py-2 rounded-md">
+      <Link
+        href="/home"
+        className="bg-primary text-background px-4 py-2 rounded-md"
+      >
         Mulai Sekarang
       </Link>
     </main>

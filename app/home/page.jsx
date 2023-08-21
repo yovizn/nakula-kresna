@@ -2,7 +2,7 @@
 
 import Fiture from "@components/Home/Fitur";
 import Hero from "@components/Home/Hero/index";
-import Prolog from "@components/Article/Prolog";
+import Prolog from "@components/Home/Prolog";
 import Preloader from "@components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -32,10 +32,11 @@ export default function Home() {
 
       <Fiture />
 
-      {/* Butto */}
+      <Prolog />
+
       <Link
         href="/article"
-        className="container mx-auto mt-10 flex justify-end"
+        className="container mx-auto mt-10 flex justify-end mb-10"
       >
         <div className="flex items-center justify-end">
           <h1 className="text-xl mr-1">Selanjutnya</h1>

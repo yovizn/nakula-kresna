@@ -33,7 +33,7 @@ module.exports = {
         "5xl": ["80px", { lineHeight: "80px", letterSpacing: "-.032em" }],
       },
       colors: {
-        text: "#f5e5e5",
+        text: "#f5f5f5",
         background: "#050505",
         primary: "#4fbfbf",
         secondary: "#171717",
@@ -80,5 +80,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };

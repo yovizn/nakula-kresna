@@ -1,29 +1,3 @@
-export const FasilitasLink = [
-  {
-    title: "Keagamaan",
-    agamaIslam: [
-      {
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
-        source: "/images/image2.jpg",
-      },
-    ],
-    agamaKristen: [
-      {
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
-        source: "/images/image2.jpg",
-      },
-    ],
-  },
-  {
-    title: "",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
-    source: "/images/image2.jpg",
-  },
-];
-
 export const CarouselSlider = [
   {
     id: 1,
@@ -141,5 +115,50 @@ export const FitureContent = [
     title: "Apa saja yang ada di Nakula Kresna?",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+  },
+];
+
+export const FasilitasKeagamaan = [
+  {
+    title: "Musholah Al-Iman",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+    src: "Masjid.png",
+  },
+  {
+    title: "Gereja Katolik",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+    src: "Masjid.png",
+  },
+];
+
+export const FasilitasKeamanan = [
+  {
+    title: "Pos Satpam",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+    src: "Security.png",
+  },
+  {
+    title: "Kamera CCTV",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+    src: "CCTV.png",
+  },
+];
+
+export const FasilitasSeniOlahraga = [
+  {
+    title: "Lapangan Serbaguna",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+    src: "Play.png",
+  },
+  {
+    title: "Tempat Memancing",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+    src: "Fish.png",
   },
 ];
