@@ -29,6 +29,11 @@ export const NavLinks = [
   },
   {
     id: 3,
+    href: "/fasilitas",
+    title: "Fasilitas",
+  },
+  {
+    id: 4,
     href: "/about",
     title: "Tentang Kami",
   },
@@ -102,19 +107,19 @@ export const FitureContent = [
     value: "item-1",
     title: "Apa itu Nakula Kresna?",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+      "Media Informasi, Edukasi serta kreasi dari kelompok pemuda - pemudi ( karangtaruna )  yang ada di wilayah Bekasi Timur Permai yang bertujuan untuk kepentingan masyarakat.",
   },
   {
     value: "item-2",
     title: "Apa tujuan Nakula Kresna?",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+      "Membangun  dan menciptakan Wadah Bagi Pemuda Pemudi untuk membangun Media Publikasi, Fasilitas Digital, Membangun ekonomi Kreatif  serta Memperkenalkan Program Kerja kepengurusan Wilayah yang ada di Perumahan Bekasi Timur Permai hingga Sejarah  secara legalitas dan diakui masyarakat.",
   },
   {
     value: "item-3",
     title: "Apa saja yang ada di Nakula Kresna?",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+      "Informasi, Edukasi dan kreasi tentang; 1. Keagamaan 2. Pendidikan, Seni & Olah raga  3. Lingkungan Hdup 4. Perekonomian 5. Keagamaan",
   },
 ];
 

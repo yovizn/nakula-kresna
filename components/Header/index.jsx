@@ -5,7 +5,8 @@ import Nav from "./Nav/index";
 import styles from "./style.module.scss";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { NavLinks } from "@constants";
+import Logo from "@public/images/Logo.png";
+import Image from "next/image";
 
 export default function Index() {
   const [isActive, setIsActive] = useState(false);
@@ -31,20 +32,10 @@ export default function Index() {
       <Link
         passHref
         href="/"
-        className="hidden md:block absolute w-fit h-fit top-10 left-10 z-50 overflow-hidden"
+        className="hidden md:block absolute w-fit h-fit -top-5 left-10 z-50 overflow-hidden"
       >
-        <div className="uppercase text-primary text-2xl desktop:text-5xl [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] font-clashDisplay font-semibold mb-1 group">
-          <h1>Nakula Kresna</h1>
-          {NavLinks.map((link) => (
-            <p
-              key={link.id}
-              className={`${
-                link.href === path ? "absolute bottom-0 right-0 w-fit" : ""
-              }hidden text-lg text-white translate-y-[2rem] group-hover:translate-y-0 transition-transform duration-150`}
-            >
-              {`Your are on "${link.title}"`}
-            </p>
-          ))}
+        <div className="relative w-[10rem] h-[10rem] group">
+          <Image src={Logo} alt="Logo NK" fill className="object-cover" />
         </div>
       </Link>
       <div>

@@ -1,11 +1,11 @@
 "use client";
 
-import Hero from "@components/Article/Hero/index";
+import ImageCarousel from "@components/Fasilitas/ImageCarousel";
 import Preloader from "@components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { useLayoutEffect, useState } from "react";
 
-export default function Article() {
+export default function Fasilitas() {
   const [isLoading, setIsLoading] = useState(true);
 
   useLayoutEffect(() => {
@@ -22,11 +22,11 @@ export default function Article() {
   }, []);
 
   return (
-    <main className="flex flex-col min-h-[200vh] bg-secondary">
+    <div>
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <Hero />
-    </main>
+      <ImageCarousel />
+    </div>
   );
 }

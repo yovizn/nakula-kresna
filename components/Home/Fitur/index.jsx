@@ -12,14 +12,28 @@ import {
   NewspaperIcon,
 } from "@heroicons/react/24/outline";
 import { useRef } from "react";
-import { useInView, motion, animate } from "framer-motion";
+import { useInView, motion } from "framer-motion";
+
+function Text({ children }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref}>
+      <span
+        style={{
+          transform: isInView ? "none" : "translateX(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
+        {children}
+      </span>
+    </div>
+  );
+}
 
 export default function Fiture() {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-  const card = useRef(null);
-  const cardInView = useInView(card);
-
   const fadeInCard = {
     initial: {
       opacity: 0,
@@ -38,43 +52,30 @@ export default function Fiture() {
     {
       title: "Informasi",
       description:
-        "Informasi yang kami berikan kepada anda adalah informasi yang terpercaya",
+        "Informasi menarik seputar Kegiatan, Fun Fact dan Event lainnya.",
       icon: <NewspaperIcon className="w-6 h-6" />,
     },
     {
       title: "Dokumentasi Foto & Video",
-      description: "Dokumentasi foto dan video yang kami berikan kepada anda",
+      description: "Foto dan Video hingga Keseruan yang pernah tercipta.",
       icon: <PhotoIcon className="w-6 h-6" />,
     },
     {
       title: "Fasilitas",
-      description: "Fasilitas yang ada di linkungan Kami",
+      description: "Wadah Kreasi melalui ide ide menarik yang ada.",
       icon: <HomeModernIcon className="w-6 h-6" />,
     },
   ];
 
   return (
-    <div
-      ref={ref}
-      className="bg-gradient-to-b from-background to-secondary from-10% px-4 lg:px-10 py-20 overflow-hidden"
-    >
-      <div
-        style={{
-          transform: isInView ? "none" : "translateX(-200px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
-        }}
-        className="mb-4"
-      >
-        <h1 className="text-2xl lg:text-4xl font-medium text-accent lg:max-w-[30rem]">
-          <Balancer>Mengetahui lebih banyak tentang Nakula Kresna?</Balancer>
-        </h1>
+    <div className="bg-gradient-to-b from-background to-secondary from-10% px-4 lg:px-10 py-20 overflow-hidden">
+      <div className="mb-4">
+        <div className="text-2xl lg:text-4xl font-medium text-accent lg:max-w-[30rem]">
+          <Text>Mengetahui lebih banyak tentang Nakula Kresna?</Text>
+        </div>
       </div>
 
-      <div
-        ref={card}
-        className="grid md:grid-cols-[2fr_2fr_2fr] gap-10 md:gap-10 text-background mb-14"
-      >
+      <div className="grid md:grid-cols-3 gap-10 md:gap-10 text-background mb-14">
         {FitureCard.map((l, idx) => {
           return (
             <motion.div
@@ -113,11 +114,12 @@ export default function Fiture() {
                   variants={fadeInCard}
                   initial="initial"
                   whileInView="animate"
+                  className="even:border-t even:border-b"
                 >
                   <AccordionItem
                     key={l.value}
                     value={l.value}
-                    className="border-b py-1 px-2"
+                    className="py-1 px-2"
                   >
                     <AccordionTrigger className="text-xl text-start hover:text-accent">
                       {l.title}

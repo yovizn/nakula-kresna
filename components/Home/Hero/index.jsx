@@ -2,6 +2,7 @@ import { Balancer } from "react-wrap-balancer";
 import Image from "next/image";
 import Foto from "@public/images/image5.jpg";
 import { motion } from "framer-motion";
+import ImageComp from "@components/ImageComp";
 
 export default function Hero() {
   return (
@@ -25,21 +26,7 @@ export default function Hero() {
           </Balancer>
         </p>
       </motion.div>
-      <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 3.3, duration: 1 }}
-        className="relative flex flex-col items-center justify-center w-full min-h-screen"
-      >
-        <Image
-          src={Foto}
-          alt="Foto"
-          fill
-          quality={100}
-          className="object-cover object-center max-md:object-top brightness-50"
-          priority
-        />
-      </motion.div>
+      <ImageComp src={Foto} className="w-screen h-screen" />
     </div>
   );
 }

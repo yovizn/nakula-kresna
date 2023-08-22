@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default function Fasilitas() {
+export default function ImageCarousel() {
   return (
     <div className="mx-4">
       <div className="mb-10">
