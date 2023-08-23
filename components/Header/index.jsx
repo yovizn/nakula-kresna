@@ -5,8 +5,9 @@ import Nav from "./Nav/index";
 import styles from "./style.module.scss";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Logo from "@public/images/Logo.png";
+import Logo from "@public/images/Logo2.png";
 import Image from "next/image";
+import Magenetic from "@components/Magnetic";
 
 export default function Index() {
   const [isActive, setIsActive] = useState(false);
@@ -29,15 +30,17 @@ export default function Index() {
 
   return (
     <>
-      <Link
-        passHref
-        href="/"
-        className="hidden md:block absolute w-fit h-fit -top-5 left-10 z-50 overflow-hidden"
-      >
-        <div className="relative w-[10rem] h-[10rem] group">
-          <Image src={Logo} alt="Logo NK" fill className="object-cover" />
-        </div>
-      </Link>
+      <Magenetic>
+        <Link
+          passHref
+          href="/"
+          className="hidden md:flex absolute items-center top-0 left-10 z-50 overflow-hidden group"
+        >
+          <div className="relative w-[6rem] h-[6rem] ">
+            <Image src={Logo} alt="Logo NK" fill className="object-cover" />
+          </div>
+        </Link>
+      </Magenetic>
       <div>
         <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
 
@@ -48,11 +51,13 @@ export default function Index() {
           }}
           className={styles.button}
         >
-          <div
-            className={`${styles.burger} ${
-              isActive ? styles.burgerActive : ""
-            }`}
-          ></div>
+          <Magenetic>
+            <div
+              className={`${styles.burger} ${
+                isActive ? styles.burgerActive : ""
+              }`}
+            ></div>
+          </Magenetic>
         </div>
       </div>
     </>

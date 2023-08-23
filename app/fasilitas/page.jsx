@@ -1,6 +1,7 @@
 "use client";
 
 import ImageCarousel from "@components/Fasilitas/ImageCarousel";
+import Sosmed from "@components/Fasilitas/Sosmed";
 import Preloader from "@components/Preloader";
 import { AnimatePresence } from "framer-motion";
 import { useLayoutEffect, useState } from "react";
@@ -26,7 +27,10 @@ export default function Fasilitas() {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
+
       <ImageCarousel />
+
+      <Sosmed />
     </div>
   );
 }

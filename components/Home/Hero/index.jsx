@@ -1,10 +1,49 @@
-import { Balancer } from "react-wrap-balancer";
-import Image from "next/image";
+"use client";
+
 import Foto from "@public/images/image5.jpg";
-import { motion } from "framer-motion";
 import ImageComp from "@components/ImageComp";
+import { Balancer } from "react-wrap-balancer";
+import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Hero() {
+  const firstText = useRef(null);
+  const secondText = useRef(null);
+  const slider = useRef(null);
+  let xPercent = 0;
+  let direction = -1;
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    requestAnimationFrame(animation);
+
+    gsap.to(slider.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        start: 0,
+        end: window.innerHeight,
+        scrub: 0.25,
+        onUpdate: (e) => (direction = e.direction * -1),
+      },
+      x: "-=300px",
+    });
+  }, []);
+
+  const animation = () => {
+    if (xPercent <= -100) {
+      xPercent = 0;
+    }
+    if (xPercent > 0) {
+      xPercent = -100;
+    }
+    gsap.set(firstText.current, { xPercent: xPercent });
+    gsap.set(secondText.current, { xPercent: xPercent });
+    xPercent += 0.04 * direction;
+    requestAnimationFrame(animation);
+  };
+
   return (
     <div className="min-h-screen overflow-hidden flex flex-col items-center justify-center">
       <motion.div
@@ -26,6 +65,23 @@ export default function Hero() {
           </Balancer>
         </p>
       </motion.div>
+      <div className="mb-10 h-[20vh] overflow-hidden relative w-full">
+        <div className="absolute top-[40%]">
+          <div ref={slider} className="relative whitespace-nowrap flex">
+            <p ref={firstText} className="text-2xl uppercase lg:text-[150px]">
+              <span className="font-medium text-primary">Nakula Kresna</span> -
+              Informasi - Kreasi - Sejarah -&nbsp;
+            </p>
+            <p
+              ref={secondText}
+              className="text-2xl uppercase lg:text-[150px] absolute left-[100%]"
+            >
+              <span className="font-medium text-primary">Nakula Kresna</span> -
+              Informasi - Kreasi - Sejarah -&nbsp;
+            </p>
+          </div>
+        </div>
+      </div>
       <ImageComp src={Foto} className="w-screen h-screen" />
     </div>
   );

@@ -11,8 +11,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       
-      <body className="bg-background font-clashDisplay text-text">
-        <main className="h-full">
+      <body className="bg-background font-baiJamjuree text-text">
+        <main className="h-full overflow-x-hidden">
           <Header />
           {children}
         </main>

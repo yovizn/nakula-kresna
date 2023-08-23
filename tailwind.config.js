@@ -21,6 +21,7 @@ module.exports = {
         clashDisplay: ["Clash Display", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        baiJamjuree: ["Bai Jamjuree", "sans-serif"],
       },
       fontSize: {
         sx: ["14px", { lineHeight: "24px", letterSpacing: "-.03em" }],

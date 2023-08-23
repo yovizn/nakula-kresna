@@ -24,7 +24,7 @@ export default function Home() {
     })();
   }, []);
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
@@ -35,11 +35,11 @@ export default function Home() {
       <Prolog />
 
       <Link
-        href="/article"
+        href="/aktifitas"
         className="container mx-auto mt-10 flex justify-end mb-10"
       >
         <div className="flex items-center justify-end">
-          <h1 className="text-xl mr-1">Selanjutnya</h1>
+          <h1 className="text-xl mr-1 font-satoshi">Selanjutnya</h1>
           <div className="h-[2px] w-[80px] bg-white rounded-full" />
         </div>
       </Link>

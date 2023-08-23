@@ -22,7 +22,7 @@ export default function ImageComp({ src, className }) {
           opacity: inView ? 1 : 0,
           transition: "opacity 0.2s cubic-bezier(0.3, 0.2, 0.2, 0.8)",
         }}
-        className="object-cover"
+        className="object-cover object-top"
       />
     </div>
   );

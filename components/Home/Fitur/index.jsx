@@ -5,49 +5,16 @@ import {
   AccordionTrigger,
 } from "@radix-ui/react-accordion";
 import { FitureContent } from "@constants";
-import { Balancer } from "react-wrap-balancer";
 import {
   PhotoIcon,
   HomeModernIcon,
   NewspaperIcon,
 } from "@heroicons/react/24/outline";
-import { useRef } from "react";
-import { useInView, motion } from "framer-motion";
-
-function Text({ children }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  return (
-    <div ref={ref}>
-      <span
-        style={{
-          transform: isInView ? "none" : "translateX(-200px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-        }}
-      >
-        {children}
-      </span>
-    </div>
-  );
-}
+import { motion } from "framer-motion";
+import WordAnimation from "@components/WordsAnimation";
+import { fadeInCard } from "@components/utils/animationEverything";
 
 export default function Fiture() {
-  const fadeInCard = {
-    initial: {
-      opacity: 0,
-      x: 100,
-    },
-    animate: (idx) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: 0.1 * idx,
-      },
-    }),
-  };
-
   const FitureCard = [
     {
       title: "Informasi",
@@ -69,9 +36,9 @@ export default function Fiture() {
 
   return (
     <div className="bg-gradient-to-b from-background to-secondary from-10% px-4 lg:px-10 py-20 overflow-hidden">
-      <div className="mb-4">
-        <div className="text-2xl lg:text-4xl font-medium text-accent lg:max-w-[30rem]">
-          <Text>Mengetahui lebih banyak tentang Nakula Kresna?</Text>
+      <div className="mb-4 overflow-hidden">
+        <div className="text-6xl max-w-[40rem] leading-[90%] tracking-[-2px]">
+          <WordAnimation words="Mengetahui lebih banyak tentang Nakula Kresna?" />
         </div>
       </div>
 
@@ -83,6 +50,7 @@ export default function Fiture() {
               variants={fadeInCard}
               initial="initial"
               whileInView="animate"
+              viewport={{ once: true }}
               key={idx}
               className="flex flex-col gap-2 border p-4 rounded-md odd:bg-primary odd:text-background even:bg-secondary even:text-primary"
             >
@@ -96,7 +64,9 @@ export default function Fiture() {
       </div>
 
       <div className="mb-4 text-center md:text-end">
-        <h1 className="text-2xl md:text-3xl uppercase">Ingin tahu apa saja?</h1>
+        <h1 className="text-2xl md:text-3xl uppercase">
+          <WordAnimation words="Ingin tahu apa saja?" />
+        </h1>
       </div>
 
       <div className="w-full">
@@ -114,6 +84,7 @@ export default function Fiture() {
                   variants={fadeInCard}
                   initial="initial"
                   whileInView="animate"
+                  viewport={{ once: true }}
                   className="even:border-t even:border-b"
                 >
                   <AccordionItem

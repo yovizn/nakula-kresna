@@ -1,7 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { FasilitasKeagamaan, FasilitasKeamanan, FasilitasSeniOlahraga } from "@constants";
+import {
+  FasilitasKeagamaan,
+  FasilitasKeamanan,
+  FasilitasSeniOlahraga,
+} from "@constants";
 import { Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

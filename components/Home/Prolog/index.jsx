@@ -1,5 +1,9 @@
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import Image from "next/image";
+import Foto from "@public/images/HeadArticle.png";
+import WordAnimation from "@components/WordsAnimation";
+import ImageComp from "@components/ImageComp";
 
 function Text({ children }) {
   const ref = useRef(null);
@@ -26,7 +30,7 @@ export default function Prolog() {
       <div className="px-4 py-10 flex flex-col items-center">
         <div className="mb-10 text-start">
           <div className="text-xl lg:text-4xl text-accent max-w-[60rem] font-medium md:uppercase">
-            <Text>Pengetahuan umum tentang Perumahan Bekasi Timur Permai</Text>
+            <WordAnimation words="Pengetahuan umum tentang Perumahan Bekasi Timur Permai" />
           </div>
         </div>
         <div className="text-justify lg:text-lg font-satoshi font-light max-w-[1080px]">
@@ -100,6 +104,10 @@ export default function Prolog() {
               wilayahnya. Salah satunya pembangungan, dimana dalam pelaksanaanya
               diterapkan sistem gotong royong yang bertujuan untuk masyarakat.
             </Text>
+          </div>
+          <br />
+          <div>
+            <ImageComp src={Foto} className="w-full h-screen object-top" />
           </div>
         </div>
       </div>

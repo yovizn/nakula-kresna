@@ -24,8 +24,8 @@ export const NavLinks = [
   },
   {
     id: 2,
-    href: "/article",
-    title: "Article",
+    href: "/aktifitas",
+    title: "Aktifitas",
   },
   {
     id: 3,
@@ -165,5 +165,39 @@ export const FasilitasSeniOlahraga = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
     src: "Fish.png",
+  },
+];
+
+export const SocialMedia = [
+  {
+    icon: "svg/facebook.svg",
+    href: "https://www.facebook.com",
+  },
+  {
+    icon: "svg/mail.svg",
+    href: "https://www.gmail.com",
+  },
+  {
+    icon: "svg/youtube.svg",
+    href: "https://www.youtube.com",
+  },
+  {
+    icon: "svg/twitter.svg",
+    href: "https://www.twitter.com",
+  },
+];
+
+export const OlahRaga = [
+  {
+    title: "Futsal",
+    src: "Futsal.JPG",
+  },
+  {
+    title: "Marathon",
+    src: "Maraton.JPG",
+  },
+  {
+    title: "Voli",
+    src: "Futsal.JPG",
   },
 ];
