@@ -6,7 +6,7 @@ import Intro from "@components/About/Intro/index";
 import Description from "@components/About/Description/index";
 import Projects from "@components/About/Projects/index";
 import { AnimatePresence } from "framer-motion";
-import Preloader from "@components/Preloader";
+import Preloader from "@components/Preloader/Preloader";
 import History from "@components/About/History";
 
 export default function About() {

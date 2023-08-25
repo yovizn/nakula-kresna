@@ -19,7 +19,7 @@ export default function ScrollSection() {
         translateX: 0,
       },
       {
-        translateX: "-300vw",
+        translateX: "-100vw",
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -42,7 +42,7 @@ export default function ScrollSection() {
       <div ref={triggerRef}>
         <div
           ref={sectionRef}
-          className="scroll-section-inner h-screen w-[400vw] flex flex-row relative"
+          className="scroll-section-inner h-screen w-[200vw] flex flex-row relative"
         >
           <div
             id="keamanan"
@@ -71,7 +71,7 @@ export default function ScrollSection() {
             </div>
           </div>
           <div
-            id=""
+            id="lingkungan"
             className="scroll-section h-screen w-screen flex justify-center items-center bg-text text-background"
           >
             <div className="flex flex-1 md:flex-row-reverse max-md:flex-col justify-center items-center gap-x-4">
@@ -80,20 +80,19 @@ export default function ScrollSection() {
                   Kegiatan Lingkungan
                 </h4>
                 <p className="font-medium">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, voluptas.
+                  Fogging untuk menjaga kesehatan lingkungan, dari nyamuk. Dan
+                  kami juga melakukan kegiatan gotong royong untuk menjaga
+                  kebersihan lingkungan.
                 </p>
               </div>
               <div>
-                <VideoPlayer src="/images/Fasilitas/Lingkungan/Fogging.mp4" className="w-[95vw] md:w-[20rem] lg:w-[40rem]" size="20" />
+                <VideoPlayer
+                  src="/images/Fasilitas/Lingkungan/Fogging.mp4"
+                  className="w-[95vw] md:w-[20rem] lg:w-[40rem]"
+                  size="20"
+                />
               </div>
             </div>
-          </div>
-          <div className="scroll-section h-screen w-screen flex justify-center items-center">
-            <h3 className="text-xl font-bold uppercase">Section 3</h3>
-          </div>
-          <div className="scroll-section h-screen w-screen flex justify-center items-center">
-            <h3 className="text-xl font-bold uppercase">Section 4</h3>
           </div>
         </div>
       </div>

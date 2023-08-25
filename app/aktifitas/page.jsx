@@ -2,7 +2,7 @@
 
 import FiturAktifitas from "@components/Aktifitas/Fitur";
 import HeroAktifitas from "@components/Aktifitas/Hero";
-import Preloader from "@components/Preloader";
+import PreloaderAktifitas from "@components/Preloader/PreloaderAktifitas";
 import { AnimatePresence } from "framer-motion";
 import { useLayoutEffect, useState } from "react";
 
@@ -25,7 +25,7 @@ export default function Aktifitas() {
   return (
     <main className="flex flex-col min-h-[200vh]">
       <AnimatePresence mode="wait">
-        {isLoading && <Preloader />}
+        {isLoading && <PreloaderAktifitas />}
       </AnimatePresence>
 
       <HeroAktifitas />

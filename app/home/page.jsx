@@ -3,9 +3,8 @@
 import Fiture from "@components/Home/Fitur";
 import Hero from "@components/Home/Hero/index";
 import Prolog from "@components/Home/Prolog";
-import Preloader from "@components/Preloader";
+import Preloader from "@components/Preloader/Preloader";
 import { AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { useLayoutEffect, useState } from "react";
 
 export default function Home() {
@@ -33,16 +32,6 @@ export default function Home() {
       <Fiture />
 
       <Prolog />
-
-      <Link
-        href="/aktifitas"
-        className="container mx-auto mt-10 flex justify-end mb-10"
-      >
-        <div className="flex items-center justify-end">
-          <h1 className="text-xl mr-1 font-satoshi">Selanjutnya</h1>
-          <div className="h-[2px] w-[80px] bg-white rounded-full" />
-        </div>
-      </Link>
     </div>
   );
 }

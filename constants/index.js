@@ -128,7 +128,7 @@ export const FasilitasKeagamaan = [
     theme: "light",
     id: "musolah",
     title: "Musholah Al-Iman",
-    description: "Musholah Al-Iman Perum. Bekasi Timur Permai",
+    description: "Musholah Al-Iman Perum. BTP, Sebagai tempat beribadah untuk umat Islam",
     src: "Masjid.png",
   },
   {
@@ -136,8 +136,8 @@ export const FasilitasKeagamaan = [
     id: "gereja",
     title: "Gereja Katolik",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
-    src: "Masjid.png",
+      "Gereja Katolik. Bekasi Timur Permai",
+    src: "Gereja.png",
   },
 ];
 
@@ -174,19 +174,19 @@ export const FasilitasSeniOlahraga = [
 export const SocialMedia = [
   {
     icon: "svg/facebook.svg",
-    href: "https://www.facebook.com",
+    href: "https://web.facebook.com/people/Nakula-Kresna/pfbid05yXLVKXepDefPdVTqjgDMEZcT8vBfi25dDtUGXxQpxwaKSBNjCg2foGA6336pYRYl/?mibextid=ZbWKwL",
   },
   {
     icon: "svg/mail.svg",
-    href: "https://www.gmail.com",
+    href: "https://kresnanakula@gmail.com",
   },
   {
     icon: "svg/youtube.svg",
     href: "https://www.youtube.com",
   },
   {
-    icon: "svg/twitter.svg",
-    href: "https://www.twitter.com",
+    icon: "svg/instagram.svg",
+    href: "https://instagram.com/nakulakresna0123?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",
   },
 ];
 

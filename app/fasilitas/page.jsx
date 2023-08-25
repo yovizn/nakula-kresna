@@ -3,7 +3,7 @@
 import HeroFasilitas from "@components/Fasilitas/Hero";
 import ImageSection from "@components/Fasilitas/ImageSection";
 import Sosmed from "@components/Fasilitas/Sosmed";
-import Preloader from "@components/Preloader";
+import PreloaderFasilitas from "@components/Preloader/PreloaderFasilitas";
 import ScrollSection from "@components/ScrollSection";
 import { AnimatePresence } from "framer-motion";
 import { useLayoutEffect, useState } from "react";
@@ -27,7 +27,7 @@ export default function Fasilitas() {
   return (
     <div className="scroll-smooth">
       <AnimatePresence mode="wait">
-        {isLoading && <Preloader />}
+        {isLoading && <PreloaderFasilitas />}
       </AnimatePresence>
       
       <HeroFasilitas />
@@ -36,7 +36,6 @@ export default function Fasilitas() {
 
       <ScrollSection />
 
-      <Sosmed />
     </div>
   );
 }

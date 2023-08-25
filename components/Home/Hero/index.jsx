@@ -74,7 +74,7 @@ export default function Hero() {
   return (
     <div className="min-h-screen overflow-hidden flex flex-col items-center justify-center">
       <motion.div
-        className="w-full mt-[10rem] text-center lg:flex max-lg:flex-col items-center lg:justify-between px-4 mb-5"
+        className="w-full mt-[10rem] text-center lg:flex max-lg:flex-col items-center lg:justify-between px-4 mb-10"
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 3.15, duration: 1 }}
@@ -93,7 +93,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Infinite Text */}
-      <div className="mb-[10rem] md:mb-10 h-[5vh] lg:h-[20vh] overflow-hidden relative w-full">
+      <div className="mb-10 h-[5vh] lg:h-[20vh] overflow-hidden relative w-full">
         <div className="absolute top-0 lg:top-[40%]">
           <div ref={slider} className="relative whitespace-nowrap flex">
             <p ref={firstText} className="text-2xl uppercase lg:text-[150px]">
