@@ -10,7 +10,7 @@ function Text({ children }) {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div ref={ref}>
+    <p ref={ref}>
       <span
         style={{
           transform: isInView ? "none" : "translateX(-200px)",
@@ -20,20 +20,20 @@ function Text({ children }) {
       >
         {children}
       </span>
-    </div>
+    </p>
   );
 }
 
 export default function Prolog() {
   return (
     <div className="mb-[20vw] lg:mb-[10.5vw] bg-gradient-to-b from-secondary to-background overflow-hidden">
-      <div className="px-4 py-10 flex flex-col items-center">
+      <div className=" flex flex-col items-center">
         <div className="mb-10 text-start">
-          <div className="text-xl lg:text-4xl text-accent max-w-[60rem] font-medium md:uppercase">
+          <div className="text-xl lg:text-8xl text-accent text-center font-medium md:uppercase">
             <WordAnimation words="Pengetahuan umum tentang Perumahan Bekasi Timur Permai" />
           </div>
         </div>
-        <div className="text-justify lg:text-lg font-satoshi font-light max-w-[1080px]">
+        <div className="text-justify lg:text-lg container mx-auto">
           <div className="text-2xl font-medium uppercase font-inter text-primary">
             <Text>Prolog</Text>
           </div>
@@ -107,7 +107,7 @@ export default function Prolog() {
           </div>
           <br />
           <div>
-            <ImageComp src={Foto} className="w-full h-screen object-top" />
+            <ImageComp src={Foto} className="w-full h-[30rem] md:w-full md:h-screen object-top" />
           </div>
         </div>
       </div>

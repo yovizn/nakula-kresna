@@ -48,4 +48,18 @@
   }
 }
 
-$layout-breakpoint-small: 960px;
+$breakpoint-small: 408px;
+@media (max-width: $breakpoint-small) {
+  .menu {
+    left: 0;
+    .body {
+      .nav {
+        font-size: 44px;
+      }
+    }
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

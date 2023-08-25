@@ -30,17 +30,24 @@ export default function Index() {
 
   return (
     <>
-      <Magenetic>
-        <Link
-          passHref
-          href="/"
-          className="hidden md:flex absolute items-center top-0 left-10 z-50 overflow-hidden group"
-        >
+      <Link
+        passHref
+        href="/"
+        className="hidden md:flex absolute items-center top-0 left-10 z-50 group"
+      >
+        <Magenetic>
           <div className="relative w-[6rem] h-[6rem] ">
-            <Image src={Logo} alt="Logo NK" fill className="object-cover" />
+            <Image
+              src={Logo}
+              alt="Logo NK"
+              fill
+              sizes="100vh"
+              className="object-cover"
+            />
           </div>
-        </Link>
-      </Magenetic>
+        </Magenetic>
+      </Link>
+
       <div>
         <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
 
@@ -51,13 +58,11 @@ export default function Index() {
           }}
           className={styles.button}
         >
-          <Magenetic>
-            <div
-              className={`${styles.burger} ${
-                isActive ? styles.burgerActive : ""
-              }`}
-            ></div>
-          </Magenetic>
+          <div
+            className={`${styles.burger} ${
+              isActive ? styles.burgerActive : ""
+            }`}
+          ></div>
         </div>
       </div>
     </>

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
-export default function ImageComp({ src, className }) {
+export default function ImageComp({ src, className, alt }) {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -16,7 +16,7 @@ export default function ImageComp({ src, className }) {
     >
       <Image
         src={src}
-        alt="Image"
+        alt={alt}
         fill
         style={{
           opacity: inView ? 1 : 0,

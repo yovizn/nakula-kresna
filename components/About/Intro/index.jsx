@@ -2,7 +2,7 @@
 
 import styles from "@components/About/Intro/style.module.scss";
 import image1 from "@public/images/image1.jpg";
-import image2 from "@public/images/Logo_.png";
+import image2 from "@public/images/Logo2.png";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

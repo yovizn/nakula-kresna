@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function WordAnim({ words }) {
   return (
-    <span>
+    <p>
       {words.split(" ").map((word, idx) => {
         return (
           <span key={idx} className="inline-block">
@@ -19,6 +19,6 @@ export default function WordAnim({ words }) {
           </span>
         );
       })}
-    </span>
+    </p>
   );
 }

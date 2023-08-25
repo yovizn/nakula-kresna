@@ -35,14 +35,14 @@ export default function Fiture() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-background to-secondary from-10% px-4 lg:px-10 py-20 overflow-hidden">
-      <div className="mb-4 overflow-hidden">
-        <div className="text-6xl max-w-[40rem] leading-[90%] tracking-[-2px]">
-          <WordAnimation words="Mengetahui lebih banyak tentang Nakula Kresna?" />
+    <div className="bg-gradient-to-b from-background to-secondary from-10% px-4 lg:px-10 py-20 overflow-hidden min-h-screen flex flex-col justify-between">
+      <div className="mb-4 overflow-hidden flex justify-end text-start md:text-end">
+        <div className="text-3xl md:text-6xl max-w-[40rem] leading-[90%] mb-4 tracking-[-2px]">
+          <WordAnimation words="Ketahui lebih banyak tentang Nakula Kresna?" />
         </div>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-10 md:gap-10 text-background mb-14">
+      <div className="grid md:grid-cols-3 gap-10 md:gap-10 text-background mb-28">
         {FitureCard.map((l, idx) => {
           return (
             <motion.div

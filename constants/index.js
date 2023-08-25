@@ -125,12 +125,15 @@ export const FitureContent = [
 
 export const FasilitasKeagamaan = [
   {
+    theme: "light",
+    id: "musolah",
     title: "Musholah Al-Iman",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
+    description: "Musholah Al-Iman Perum. Bekasi Timur Permai",
     src: "Masjid.png",
   },
   {
+    theme: "dark",
+    id: "gereja",
     title: "Gereja Katolik",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
@@ -140,16 +143,16 @@ export const FasilitasKeagamaan = [
 
 export const FasilitasKeamanan = [
   {
-    title: "Pos Satpam",
+    title: "Pos Sekertariat RT 13",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
-    src: "Security.png",
+    src: "Pos.jpeg",
   },
   {
     title: "Kamera CCTV",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id suscipit aliquid ratione doloribus quod consequuntur adipisci beatae hic ipsa numquam?",
-    src: "CCTV.png",
+    src: "Cctv01.jpeg",
   },
 ];
 
@@ -191,13 +194,46 @@ export const OlahRaga = [
   {
     title: "Futsal",
     src: "Futsal.JPG",
+    alt: "Foto Futsal HUT RI 2023 Perum. Bekasi Timur Permai",
+    desc: "Futsal HUT RI 2023 Perum. Bekasi Timur Permai",
+    className: "perspective-left",
   },
   {
     title: "Marathon",
     src: "Maraton.JPG",
+    alt: "Foto Maraton HUT RI 2023 Perum. Bekasi Timur Permai",
+    desc: "Maraton HUT RI 2023 Perum. Bekasi Timur Permai",
+    className: "perspective-right",
   },
   {
     title: "Voli",
     src: "Futsal.JPG",
+    alt: "Foto Voli HUT RI 2023 Perum. Bekasi Timur Permai",
+    desc: "Voli HUT RI 2023 Perum. Bekasi Timur Permai",
+    className: "perspective-left third",
+  },
+];
+
+export const IntroImages = [
+  {
+    src: "/images/Selamat Datang.JPG",
+  },
+  {
+    src: "/images/Pembangunan.JPG",
+  },
+  {
+    src: "/images/Jalan Utama.JPG",
+  },
+  {
+    src: "/images/Parallax/1.png",
+  },
+  {
+    src: "/images/Parallax/10.png",
+  },
+  {
+    src: "/images/Street.png",
+  },
+  {
+    src: "/images/HeadArticle.png",
   },
 ];

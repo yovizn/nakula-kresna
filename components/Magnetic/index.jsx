@@ -1,38 +1,35 @@
 "use client";
 
-import { gsap } from "gsap";
-import React, { useEffect, useRef } from "react";
+import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Magenetic({ children }) {
-  const ref = useRef(null);
+  const refs = useRef(null);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const xTo = gsap.quickTo(ref.current, "x", { duration: 1, ease: "elastic.out(1, 0.3)" })
-    const yTo = gsap.quickTo(ref.current, "y", { duration: 1, ease: "elastic.out(1, 0.3)" })
-    
-    const mouseMove = (e) => {
-      const { clientX, clientY } = e;
-      const { left, top, width, height } = e.target.getBoundingClientRect();
-      const x = clientX - (left + width / 2);
-      const y = clientY - (top + height / 2);
-      xTo(x);
-      yTo(y);
-    };
-    const mouseLeave = (e) => {
-      xTo(0);
-      yTo(0);
-    };
+  const mouseMove = (e) => {
+    const { clientX, clientY } = e;
+    const { width, height, left, top } = refs.current.getBoundingClientRect();
+    const x = clientX - (left + width / 2);
+    const y = clientY - (top + height / 2);
+    setPosition({ x, y });
+  };
 
-    ref.current.addEventListener("mousemove", mouseMove);
-    ref.current.addEventListener("mouseleave", mouseLeave);
+  const mouseLeave = () => {
+    setPosition({ x: 0, y: 0 });
+  };
 
-    return () => {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      ref.current.removeEventListener("mousemove", mouseMove);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      ref.current.removeEventListener("mouseleave", mouseLeave);
-    };
-  }, []);
+  const { x, y } = position;
 
-  return React.cloneElement(children, { ref });
+  return (
+    <motion.div
+      onMouseMove={mouseMove}
+      onMouseLeave={mouseLeave}
+      ref={refs}
+      animate={{ x, y }}
+      transition={{type: "spring", stiffness: 150, damping: 15, mass: 0.5}}
+    >
+      {children}
+    </motion.div>
+  );
 }

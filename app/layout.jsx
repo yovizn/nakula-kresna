@@ -1,5 +1,6 @@
 import "@style/globals.css";
 import Header from "@components/header"
+import Footer from "@components/Footer";
 
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         <main className="h-full overflow-x-hidden">
           <Header />
           {children}
+          <Footer />
         </main>
       </body>
     </html>
